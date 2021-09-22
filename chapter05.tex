@@ -1,0 +1,676 @@
+\chapter{附录方程解法}
+
+代数方程式是
+\[
+a_{0} x^{n}+a_{1} x^{n-1}+\cdots \cdots+a_{n}=0
+\]
+的形式的方程式 ,其中 $n$ 是正整数 .
+
+一次方程式
+\[
+a x+b=0.
+\]
+
+
+二次方程式
+\[
+a x^{2}+b x+c=0.
+\]
+
+
+三次方程式
+\[
+a x^{3}+b x^{2}+c x^{2}+d=0.
+\]
+
+四次方程式
+\[
+a x^{4}+b x^{3}+c x^{2}+d x+e=0.
+\]
+
+
+\section{一次方程解法}
+
+一次方程式：
+\[
+a x+b=0
+\]
+
+当$a \neq 0$时：
+\[
+x=-\dfrac{b}{a} . 
+\]
+
+当$ a = 0 , b \neq 0 $ 时：
+原方程无解 . 
+
+
+当$ a = 0 , b = 0 $ 时：
+原方程有无数解 . 
+
+
+\section{二次方程解法}
+
+\subsection{现行课本常见的推导}
+现在各通行课本对一元二次方程求根公式的推导 , 一般是通过配方法得到的 , 即:
+
+对于方程 $ax^{2}+bx+c=0(a \neq 0)$
+
+(1)方程两边同除以 $a$ ,得: $x^{2}+\frac{b}{a} x+\frac{c}{a}=0$
+
+(2)将常数项移到方程的右边,得: $x^{2}+\frac{b}{a} x=-\frac{c}{a}$
+
+(3)方程两边同时加上 $\left(\frac{b}{2 a}\right)^{2}$ ,得: 
+$x^{2}+\frac{b}{a} x+\left(\frac{b}{2 a}\right)^{2}=\left(\frac{b}{2 a}\right)^{2}-\frac{c}{a}$
+
+(4)左边配成完全平方式 , 右边通分,得:
+$\left(x+\frac{b}{2 a}\right)^{2}=\frac{b^{2}-4 a c}{4 a^{2}}$
+
+由 $a \neq 0$ 得, $4 a^{2}>0$, 
+所以 , 当 $b^{2}-4 ac \geq 0$ 时, $\frac{b^{2}-4 a c}{4 a^{2}} \geq 0$,
+
+所以, $x=\frac{-b \pm \sqrt{b^2-4 a c}}{2 a}$
+
+\subsection{另外一种推导}
+$a x^{2}+b x+c=0(a \neq 0)$
+
+方程两边同乘以 $4a$ ,得: $4a^{2} x^{2}+4 abx+4 ac=0,$
+
+方程两边同时加上 $b^{2}$ ,得: $4 a^{2} x^{2}+4 abx+4ac+b^{2}=b^{2},$
+
+把 $4 a c$ 移到方程的右边,得: $4a^{2} x^{2}+4abx+b^{2}=b^{2}-4ac,$
+
+将左边配成完全平方式,得: $(2 a x+b)^{2}=b^{2}-4 a c,$
+
+当 $b^{2}-4ac \geq 0$ 时 , 有:
+$2 a x+b=\pm \sqrt{b^{2}-4 a c}.$
+
+所以, $2 ax=-b \pm \sqrt{b^{2}-4 a c}.$
+
+因为, $a \neq 0,$
+
+所以, $x=\frac{-b \pm \sqrt{b^2-4 a c}}{2 a}.$
+
+\subsection{Vieta的推导}
+引自：古今数学思想 , 克莱因 , 第一册 . 
+
+Cardan, Tartaglia, Ferrari通过解出三次和四次方程的许多 例子 , 表明他们曾寻求并获得能用之于一切情况的求解三次和四 次方程的方法.注重一般性是一种新的特色.他们的工作做在 Vieta引用文字系数之前 , 所以不能利用这个工具.Vieta在创用 文字系数之后使证明有可能获得普遍意义 , 又进而追求另一类普遍性.他发现解二次、三次和四次方程的方法很不相同 , 就想找一 种能适用于各次方程的方法.他的头一个想法是用置换法消去比 最高次项次数小一次的项.Tartaglia对三次方程以海做了 , 但并 未对所有方程都这样试做过.
+
+Vieta在他的《分析术引论》中做了如下的步骤:为解二次方程
+\[
+x^{2}+2 b x=c
+\]
+他让
+\[
+y=x+b
+\]
+于是
+\[
+y^{2}=x^{2}+2 b x+b^{2}
+\]
+利用原方程,得
+\[
+y=\sqrt{c+b^{2}}
+\]
+于是
+\[
+x=y-b=\sqrt{c+b^{2}}-b
+\]
+
+拓展：
+
+对于三次方程
+\[
+x^{3}+b x^{2}+c x+d=0
+\]
+Vieta 先设 $x=y-b / 3 .$ 置换结果得的简三次方程
+\[
+y^{3}+p y+q=0 \quad (23)
+\]
+其次他再作一次变换, 那就是如今在学校里所教的. 就是令
+\[
+y=z-\frac{p}{3 z} \quad (24)
+\]
+得
+\[
+z^{3}-\frac{p^{3}}{27 z^{3}}+q=0
+\]
+然后他解出这 $z^{3}$ 的二次方程, 得
+\[
+z^{3}=-\frac{q}{2} \pm \sqrt{R}, \text { 其中 } R=\left(\frac{p}{3}\right)^{3}+\left(\frac{q}{2}\right)^{2}
+\]
+这里也同 Cardan 的方法一样, 有两个 $z^{3}$ 的值. Vieta 虽然只用了
+$z^{3}$ 的正立方根 , 但我们可以用所有六个(复数)根. 应用(24)的结
+果可以证明从六个 $z$ 值只能得出三个不同的 $y$ 值.
+为解一般四次方程
+\[
+x^{4}+b x^{3}+c x^{2}+d x+e=0
+\]
+Vieta 设 $x=y-b / 4$ 于是把方伸化为
+\[
+x^{4}+p x^{2}+q x+r=0
+\]
+然后他把末后三项移到右边并在两边加上$2x^2y^2+y^4$.这就使左
+边配成完全平方, 然后也象 Ferrari 的方法那样, 适当选取$y$ , 使右
+边成为形如 $(A x+B)^{2}$ 的完全平方. 为选取合适的 $y$, 他利用二次
+方程的判别式条件, 得出 $y$ 的一个六次方程而且凑巧还是 $y^{2}$ 的三 次方程 . 这一步以及其余各步就完全和 Ferrari 的方法一样了.
+
+Vieta 所探求的另一个一般性方法是把多项式分解成一次因
+子 , 如同我们把 $x^{2}+5 x+6$ 分解成 $(x+2)(x+3)$ 那样. 这事他没
+有做成功, 部分原因是他只取正根而舍弃其他一切根,部分原因是
+他没有足够的理论(如分解因子定理)作为依据来搞出一般方法.
+Thomas Harriot 也有同样的想法但也由于同样的原因而片于失
+败.
+
+寻求一般代数方法的工作接着就转向解四次以上的方程.
+James Gregory 在提出他自己的解三次及四次方程的方法后 , 便 
+试图用这些方法来解 五次方程 . 他和 Ehrenfried Walter von
+Tschirnhauson $(1651 \sim 1708)$ 想通过变换把高次方程化为只含 $x$
+的一个乘幂和一个常数那么两项的方程. 解四次以上的方程的这
+些尝试都失败了. Gregory 在其后关于积分法的著作中猜测 , 对
+$n>4$ 的一般 $n$ 次方程是不能用代数方法求解的 . 
+
+\section{三次方程解法}
+
+卡尔达诺（1501年9月24日 ~1576年9月21日)是大利文艺复兴时期百科全书式的学者 , 他最著名的成就是推导出了三次代数方程的解法 , 即卡尔达诺公式 . 
+
+\subsection{思想}
+先把方程 $a x^{3}+b x^{2}+c x+d=0 \quad (1)$ 
+化为 $x^{3}+p x+q=0 \quad (2)$ 的形式 , 再直接利用卡尔丹诺公式.
+
+
+\subsection{Cardan的方法}
+引自：古今数学思想 , 克莱因 , 第一册 . 
+
+用配方法解二次方程是从巴比伦时代就已经知道的 , 从那时
+起直到 1500 年, 这方面的唯一进展 是印度人作出的 , 他们把 
+$x^{2}+3 x+2=0$ 与 $x^{2}-3 x-2=0$ 那样的二次方程作为同一类型来
+处理 , 而他们的前人乃至文艺复兴时期的绝大多数后继者却宁
+愿把后一个方程作为 $x^{2}=3 x+2$ 的形式来处理. 如前所指出的 ,  
+Cardan 确曾解出一个有复数根的二次方程, 但他认为这些解是无
+用的而未加考虑. 至于三次方程 , 则除了个别情形之外数学家还
+对之束手无策; 直到 1494 年那么晚近的年月, Pacioli 还宣称一般
+的三次方程是不可能解的 . 
+
+1500 年左右, 波仑亚(Bologna)的数学教授 Scipione dal Ferro
+$(1465 \sim 1526)$解出了 $x^{3}+m x=n$ 类型的三次方程. 但他没有发表
+他的解法, 因在十六和十七世纪时 , 人们常把所得的发现保密 , 而
+向对手们提出挑战, 要他们解出同样的问题. 但在 1510 年左右,
+他确曾把他的方法秘传给 Antonio Maria Fior (十六世纪前半叶)
+和他的女婿兼继承人 Annibale della Nave$(1500 ? \sim 1558) .$
+直到布里西亚(Brescia)的 Niccolò Fontana $(1499 ? \sim 1557)$ 出 
+场之前 , 情況没有什么变化. 这人在孩提时被一个法国兵用马刀
+砍伤脸部而引起口吃;因此大家称他为 Tarvaglia, 意即‘口吃者’.
+他出身贫寒 , 自己学会拉丁文、希腊文和数学.他靠着在意大利各
+城市讲授科学谋生. 1535 年, Fior 向 Tartaglia 挑战 , 要他解 三 
+十个三次方程. Tartaglia 说他早已解出了 $x^{3}+m x^{2}=n(m$ 与 $n$ 是 
+正数)类型的三次方程 , 这次解出了所有三十个方程 , 其中包括 $x^{3}+m x=n$ 类型的方程.
+
+在Cardan的恳切要求之下 , 并发誓对此保守秘密 , Tartaglia
+オ把他的方法写成一首语句晦涩的诗告诉给 Cardan. 这是 1539
+年的事. 1542 年 Cardan 和他的学生Lodovioo Ferrari $(1522 \sim 1565)$
+在 della Nave 访问他们的时候 , 肯定认为 dal Ferro 的方法同
+Tartaglia 的方法是相同的. Cardan 不顾他的誓言, 把他对这个方
+法的叙述发表在他的《重要的艺术》里. 他在第十一章里说: “波仑
+亚的 Scipio Ferro 差不多在三十年以前就发现了这个法则 , 并把
+它传给威尼斯 (Venice)的 Antonio Maria Fior, Fior 在他与布里
+西亚的 N. Tartaglia 竞赛的时候使 Tarfäglia 有机会发现这一法
+则 . 我在获得这种帮助的情况下找出了它的各种形式的证明. 这是很
+难做的. 我把它叙述如下 . ”
+
+Tartaglia 抗议 Cardan 背信弃义. 并在《各种问题与发明》
+(Quesiti ed invenzioni diverse, 1546 ) 中发表了他自己的方法. 但
+是无论在这本书中还是在他的《数量概论》 (1556) (这是阐释那个
+时代的算术知识和几何知识的一本好书)中, 他都没有给出关于三
+次方程本身的更多材料. 关于谁先解出三次方程的争议使 Tartag
+lia 与 Ferrari 发生公开冲突 , 最后以双方肆意谩骂而 告终 , 但
+Cardan 并未参与其中. Tartaglia 自己也不是无可非议的; 他 出
+版了 Archimedes 的一些著作的译本 , 实则 是抄自 William of
+Moerbecke(卒于 1281 年左右)的 , 并且他自称发现了物体沿斜面 
+运动的规律, 但实际上这是 Jordanus Nemorarius 创立的.
+
+
+在 Cardan 所发表的方法中 , 他先以 $x^{3}+6 x=20$ 为例 . 但为
+说明这个方法的一般性, 我们来考察
+\[
+x^{3}+m x=n, \quad (4)
+\]
+其中 $m$ 与 $n$ 是正数. Cardan 引入 $t$ 与 $u$ 两个量, 并令
+\[
+t-u=n, \quad (5)
+\]
+以及
+\[
+(t u)=\left(\frac{m}{3}\right)^{3}, \quad (6)
+\]
+然居他断言
+\[
+x=\sqrt[3]{t}-\sqrt[3]{u}, \quad (7)
+\]
+他利用(5)及 (6)进行消元并解所得的二次方程, 得出
+
+\[t=\sqrt{\left(\frac{n}{2}\right)^{2}+\left(\frac{m}{3}\right)^{3}}+\frac{n}{2}, \quad u=\sqrt{\left(\frac{n}{2}\right)^{2}+\left(\frac{m}{3}\right)^{3}}-\frac{n}{2}, \quad (8).\]
+
+这里我们也象 Cardan 那样取正根 . 求出了 $t$ 和 $u$ 后, Cardan
+取两者的正立方根 , 并用(7)给出 $x$ 的一个值. 据认为这就是Tartaglia所得出的同一个根.
+
+以上是 Cardan 发表的方法. 不过他得证明 $(7)$ 给出的是 $x$ 的 
+一个正确的值. 他的证明是用儿何方法的; Cardan 把 $t$ 和 $u$看成 
+立方体的体积, 其边长各为 $\sqrt[3]{t}$ 和 $\sqrt[3]{u}$,而乘积 $\sqrt[3]{t} \sqrt[3]{u}$ 是两边所 
+形成的矩形 , 其面积为 $m / 3 .$ 又, 我们所说的 $t-u=n$ 对 Cardan
+说是两个体积之差等于 $n_{0}$ 于是他说解 $x$ 就等于两立方体边长之 
+差, 即 $x=\sqrt[3]{t}-\sqrt[3]{u}$. 为证明这 $x$ 值是对的, 他叙述并证明一个 
+几何引理, 这就是: 若从一根线段 $A C$ 上截去一段 $B C$, 则 $A B$ 上的立方体等于 $A C$ 上的立方体减去 $B C$ 上的立方体再减 去
+以 $A C, A B$ 及 $B C$ 为边的正平行六面体、这个几何引理的内容当 
+然只不过是说
+
+\[\quad(\sqrt[3]{t}-\sqrt[3]{u})^{3}=t-u-3(\sqrt[3]{t}-\sqrt[3]{u}) \sqrt[3]{t} \sqrt[3]{u} \quad (9)\]
+
+有了这个引理(应用二项式定理 , 我们知道这引理必然 成立 , 但
+Cardan 是引用 Euclid 书中的定理来证明的), Cardan 就只要证 
+明: 若设 $x=\sqrt[3]{t}-\sqrt[3]{u}, t-u=n$ 以及 $\sqrt[3]{t} \sqrt[3]{u}=\frac{m}{3}$, 则从引
+理便得 $x^{3}=n-m x .$ 于是, 如果他选取了 $t$ 和 $u$ 使之能满足条件
+$(5)$与 $(6)$, 则 $(7)$ 所给出的以 $t$ 与 $u$ 表达的 $x$ 值就能满足三次方
+程. 然后他纯粹用语言叙述这方法的算术规则, 告诉我们怎样按
+照 $(8)$ 用 $m$ 及 $n$ 表 $t$ 及 $u$ 并作出 $\sqrt[3]{t}-\sqrt[3]{u} .$
+
+Cardan (还有 Tartaglia)又解出了下列三种特殊类型的方程:
+$x^{3}=m x+n, \quad x^{3}+m x+n=0, \quad x^{3}+n=m x .$
+他需要把这三种情形都分别处理 , 并且把三者同方程(4) 分别 处
+理, 原因是, 第一, 那时候欧洲人写的方程中只含正数的项; 第二 , 
+他得对每种情形所用的法则分别给出几何上的说明.
+
+Cardan 还给出怎样解 $x^{3}+6 x^{2}=100$ 这类方程的方 法. 他知
+道怎样消去 $x^{2}$ 项; 即, 由于该项的系数是 6, 他以 $y-2$ 代 $x$, 得出
+$y^{3}=12 y+84 .$ 他还指出象 $x^{6}+6 x^{4}=100$ 这样的方程在设 $x^{2}=y$
+后可作为三次方程来处理. 他在书中自始至终都给出正根和负
+根 , 尽管他把负数称作虚拟的数. 但对复数根他是略而 不提的.
+事实上, 他在第 37 章中把那些既不解出真根(正数根) 又不能解出
+假根(负数根)的问题称作错题. 书讲得很详细——对现代读者来
+说甚至腻人,——因为 Cardan 把许多情形(不仅是对于三次方程,
+而且对于那些为求 $t$ 及 $u$ 而必须解出的辅助二次方程)都一一分
+别处理. 在每种情形下, 他把方程都写成各项有正系数的形式.
+
+
+\subsection{Vieta的解法}
+引自：古今数学思想 , 克莱因 , 第一册 . 
+
+Vieta 在他著于 1591 年并出版于 1615 年的《论方程的整理与
+修正》(De Aequationum Recognitione et Emendatione) 中, 已能
+用一个三角恒等式解出了不可约三次方程 , 从而避免使用 Cardan 的公式. 这个方法如今还在用. 他从下列恒等式开始:
+\[
+\cos 3 A \equiv 4 \cos ^{3} A-3 \cos A \quad (10)
+\]
+令 $z=\cos A$, 这恒等式就变为
+\[
+z^{3}-\frac{3}{4} z-\frac{1}{4} \cos A \equiv 0 \quad (11)
+\]
+设所给三次方程是(Vieta 处理的是 $x^{3}-3 a^{2} x=a^{2} b$  , 其中 $a>b / 2$)
+\[
+y^{3}+p y+q=0 .  \quad (12)
+\]
+代入 $y=n z$, 其中 $n$ 可按需要指定, 便可使(12)的系数化成同(11) 
+的系数一样. 将 $y=n z$ 代入(12) , 得
+\[
+z^{3}+\frac{p}{n^{2}} z+\frac{q}{n^{3}}=0 \quad (13)
+\]
+现在我们需要取 $n$ 使 $p / n^{2}=-3 / 4$, 故
+\[
+n=\sqrt{-4 p / 3} \quad (14)
+\]
+选取了这个 $n$ 值后, 再取 $A$ 值使
+\[
+\frac{q}{n^{3}}=-\frac{1}{4} \cos 3 A \quad (15)
+\]
+也就是使
+$(16)$
+\[
+\cos 3 A=-\frac{4 q}{n^{3}}=\frac{-q / 2}{\sqrt{-p^{3} / 27}}
+\]
+
+我们可证明: 若三根是实数 , 则 $p$ 是负数 , 因而 $n$ 是实数. 又因
+$|\cos 3 A|<1$, 故可从三角函数表查出 $3 A$.
+
+不管 $A$ 取何值, $\cos A$ 总满足(11), 因(11)是个恒等式. 现已
+选取 $A$ 使(13)成为(11)的特例. 对于这个 $A$ 值, $\cos A$ 满足 (13).
+但 $A$ 值是由 (16) 确定的 , 而这 $A$ 又埔定了 $3 A$. 但若 $A$ 是满足
+(16)的任一值, 则 $A+120^{\circ}$ 及 $A+240^{\circ}$ 也满足(16). 因 $z=\cos A$,
+故有三个值满足(13);
+\[
+\cos A, \cos \left(A+120^{\circ}\right) \quad , \cos \left(A+240^{\circ}\right) .
+\]
+满足(12)的那三个值是 $z$ 值的 $n$ 倍, 而 $n$ 是由(14)给出的. Vieta
+得出的只是一个根.
+
+三次方程当然有三个根. 对 Cardan 的三次方程解法的第一个
+完整的讨论是 1732 年由 L. Euler 作出的 , 他强调指出三次方程
+总有三个根, 并指出怎样去求.若 $\omega$ 和 $\omega^{2}$ 是 $x^{3}-1=0$ 的复数根,
+也就是说, 是 $x^{2}+x+1=0$ 的根, 则 $(8)$ 中 $t$ 和 $u$ 的三个立方根是
+\[
+\sqrt[3]{t}, \omega \sqrt[3]{t}, \omega \sqrt[2]{t} \quad \text { 和 }  \quad \sqrt[3]{u}, \omega \sqrt[3]{u}, \omega^{2} \sqrt[3]{u}
+\]
+
+现在必须从第一组里选取一根, 从第二组里选取一根, 使两者的乘 积是实数 $m / 3$. (参看 Cardan 解法中的方程(6).) 因 $\omega$ 与 $\omega^{2}$ 是 1
+的立方根, $\omega \cdot \omega^{2}=\omega^{3}=1$; 故据 $(7)$ 可知合适选取的 $x$ 应为
+
+$\left\{
+\begin{array}{l}
+	x_{1}=\sqrt[3]{t}-\sqrt[3]{u}, \\
+	x_{2}=\omega \sqrt[3]{t}-\omega^{2} \sqrt[3]{u},  \quad (17)\\ 
+	x_{3}=\omega^{2} \sqrt[3]{t}-\omega \sqrt[3]{u}
+\end{array}\right.$
+
+三次方程成功地解出之后接着几乎立即成功地解出了四次方
+程. 解法是 Lodovico Ferrari 给出的并发表在 Cardan 的《重要的
+艺术》中; 这里我们用现代的记号把它写出来并用文字系数以示其
+普遍性. 设方程是
+
+$x^{4}+b x^{3}+c x^{2}+d x+e=0 . \quad (18)$
+
+移项后得
+
+$x^{4}+b x^{3}=-c x^{2}-d x-e. \quad (19)$
+
+在左边加上 $\left(\frac{1}{2} b x\right)^{2}$ 配成平方. 得
+
+$\left(x^{2}+\frac{1}{2} b x\right)^{2}=\left(\frac{1}{4} b^{2}-c^{2}\right) x^{2}-d x-e . \quad (20)$
+
+两边再加上 $\left(x^{2}+\frac{1}{2} b x\right) y+\frac{1}{4} y^{2}$, 得
+
+$\left(x^{2}+\frac{1}{2} b x\right)^{2}+\left(x^{2}+\frac{1}{2} b x\right) y+\frac{1}{4} y^{2}
+=\left(\frac{1}{4} b^{2}-c+y\right) x^{2}+\left(\frac{1}{2} b y-d\right) x+\frac{1}{4} y^{2}-e \quad (21)$
+
+若使右边这个 $x$ 的二次式的判别式等于零 , 就能使这一边成为 $x$
+的一次式的完全平方. 于是设
+
+$\quad\left(\frac{1}{2} b y-d\right)^{2}-4\left(\frac{1}{4} b^{2}-c+y\right)\left(\frac{1}{4} y^{2}-e\right)=0.(22)$
+
+这是 $y$ 的一个三次方程. 选取这三次方程的任一个根代入(21)中
+的 $y$. 根据左边也是个完全平方这一事实, 取平方根, 得到 $x$ 的一 
+个二次式, 它等于 $x$ 的两个互为正负的线性函数之一. 解出这两
+个二次方程便得到 $x$ 的 4 个根. 若从(22)选取另一个根就会从
+（21)引出一个不同的方程但得到同样的四个根.
+
+对于三次方程
+\[
+x^{3}+b x^{2}+c x+d=0,
+\]
+Vieta 先设 $x=y-b / 3 .$ 置换结果得约简三次方程
+\[
+y^{3}+p y+q=0 .(23)
+\]
+其次他再作一次变换, 那就是如今在学校里所教的. 时是令
+\[
+y=z-\frac{p}{3 z},(24)
+\]
+得
+\[
+z^{3}-\frac{p^{3}}{27 z^{3}}+q=0.
+\]
+然后他解出这 $z^{3}$ 的二次方程, 得
+\[
+z^{3}=-\frac{q}{2} \pm \sqrt{R},  \quad \text { 其中 } \quad R=\left(\frac{p}{3}\right)^{3}+\left(\frac{q}{2}\right)^{2}
+\]
+这里也同 Cardan 的方法一样, 有两个 $z^{3}$ 的值. Vieta 虽然只用了
+$z^{3}$ 的正立方根 , 但我们可以用所有六个(复数)根 . 应用(24)的结
+果可以证明从六个 $z$ 值只能得出三个不同的 $y$ 值.
+
+
+
+
+
+
+
+
+
+
+
+\subsection{思路分析}
+对比以下两式：
+
+$x^{3}+p x+q=0$
+
+$(u+v)^{3}=u^{3}+3 u^{2} v+3 u v^{2}+v^{3}$
+
+即：
+
+$x^{3}+p x+9=0$
+
+$(u+v)^{3}=3 u v(u+v)+u^{3}+v^{3}$
+
+于是：
+
+$x^{3}+p x+q=0$
+
+$(u+v)^{3}-3 u v(u+v)-\left(u^{3}+v^{3}\right)=0$
+
+如果能够设法找到$u,v$使得以上两式对应相等 , 那么3次方程就能够转换成一个最简单3次方程$X^3=0$的形式 . 
+
+即：
+
+$x=u+v$
+
+$uv=-\dfrac{p}{3}$
+
+$u^3+v^3=-q$
+
+对$uv=-\dfrac{p}{3}$两边3次方 , 得$u^{3} v^{3}=-\left(\frac{p}{3}\right)^{3}$
+
+对$u^3+v^3=-q$两边乘以$v^3$ , 得$ u^{3} v^{3}+\left(v^{3}\right)^{2}=-q v^{3}$
+
+代入 , 整理 , 得：$\left(v^{3}\right)^{2}+q v^{3}-\left(\frac{p}{3}\right)^{3}=0$
+
+这其实只是一个伪装过的2次方程 , 把$v^3$看成一个未知数 , 用2次求根公式求出$v^3$ , 然后两边开3次方根就得到：
+
+$v^{3}=-\frac{q}{2} \pm \sqrt{\left(\frac{q}{2}\right)^{2}+\left(\frac{p}{3}\right)^{3}}$
+
+$v=\sqrt[3]{-\frac{q}{2} \pm \sqrt{\left(\frac{q}{2}\right)^{2}+\left(\frac{p}{3}\right)^{3}}}$
+
+在这几个式子里 , $u$和$v$是不可分割的 , 求$u$ , 得到的是同一个答案
+
+$u,v=\sqrt[3]{-\frac{q}{2} \pm \sqrt{\left(\frac{q}{2}\right)^{2}+\left(\frac{p}{3}\right)^{3}}}$
+
+现在答案有正负号 , 我们貌似对$u$和$v$每个都求出两个解 , 这样$u+v$就总共有3个可能 . 
+
+两个都是减号 , 两个都是加号 , 一加一减 , 一减一加得出的是同一个答案 , 而3次方程正好至多有3个根
+
+然后把这三个根带入方程 , 你会发现 , 只有一加一减才是3次方程的一般解 . 
+
+于是$x=\sqrt[3]{-\frac{q}{2}-\sqrt{\left(\frac{q}{2}\right)^{2}+\left(\frac{p}{3}\right)^{3}}}+\sqrt[3]{-\frac{q}{2}+\sqrt{\left(\frac{q}{2}\right)^{2}+\left(\frac{p}{3}\right)^{3}}}$
+
+
+
+\subsection{卡尔丹诺公式推导方法一}
+将解方程 $a x^{3}+b x^{2}+c x+d=0 \quad (1)$ 
+
+转化为解方程 $y^{3}+p y+q=0 \quad (2).$ 
+
+不妨设 $p,q$ 均不为零, 令 $y=u+v \quad (3)$  
+
+代入（2）得, $u^{3}+v^{3}+(u+v)(3 u v+p)+q=0 \quad (4)$
+
+选择 $u,v$, 使得 $3 u v+p=0$, 即 $u v=-\frac{p}{3} \quad (5)$ 
+
+代入(4) 得, $u^{3}+v^{3}=-q \quad (6) $ 
+
+将(5) 式两边立方得, $u^{3} v^{3}=-\frac{p^{3}}{27} \quad (7)$
+
+联立（6）、（7）两式 , 得关于 $u^{3}$ 、 $v^{3}$ 的方程组:
+
+$\left\{
+\begin{array}{l}
+	u^{3}+v^{3}=-q ,  \\ 
+	u^{3} v^{3}=-\frac{p^{3}}{27} , 
+\end{array} \quad\right.$ 
+且 $u v=-\frac{p}{3}$
+
+于是问题归结于求上述方程组的解 , 即关于 $t$ 的一元二次方程 $t^{2}+q t-\frac{p^{3}}{27}=0$ 的两根 $u^{3}, v^{3}$  .  
+
+设 $\Delta=q^{2}+\frac{4 p^{3}}{27}, \quad D=\frac{\Delta}{4}=\left(\frac{q}{2}\right)^{2}+\left(\frac{p}{3}\right)^{3}, \quad T=-\frac{q}{2}.$
+
+又记 $u^{3}$ 的一个立方根为 $u_{1}$, 则另两个立方根为 $u_{2}=\omega_{1} u_{1}, u_{3}=\omega_{2} u_{1}$, 其中 $\omega_{1} 、 \omega_{2}$ 为 1 的两 个立方虚根 . 
+
+以下分三种情形讨论:
+
+1) 若 $\Delta>0$, 即 $D>0$, 则 $u^{3} 、 v^{3}$ 均为实数 , 可求得 $u^{3}=T+\sqrt{D}, u^{3}=T-\sqrt{D}$. 
+
+取 $u_{1}=\sqrt[3]{T+\sqrt{D}}, \quad v_{1}=\sqrt[3]{T-\sqrt{D}}$,
+
+在 $y=u_{i}+v_{j}, \quad(i, j=1,2,3)$ 组成的九个数中 , 有且只有下面三组满足 $u v=-\frac{p}{3}$,
+(即 $u_{1}, v_{1} ; u_{2}, v_{3} ; u_{3}, v_{2}$, 也就是满足 $u_{1} v_{1}=u_{2} v_{3}=u_{3} v_{2}=\sqrt[3]{T^{2}-D}=-\frac{p}{3}$,)
+
+于是方程（2）的根为 
+$y_{1}=u_{1}+v_{1}, \quad 
+y_{2}=\omega_{1} u_{1}+\omega_{2} v_{1}, \quad 
+y_{2}=\omega_{2} u_{1}+\omega_{1} v_{1}$,
+
+这时方程(2)有一个实根,两个共轭虚根 , 其表达式就是前面给出的“ 卡丹公式”的形式.
+
+2) 若$\Delta=0$ , 即 $D=0$ 时 , 可求得 $u^{3}=v^{3}=T$  . 取 $u_{1}=v_{1}=\sqrt[3]{T}$,
+
+同理 , 可求得 $y_{1}=u_{1}+v_{1}=2 \sqrt[3]{T}=-\sqrt[3]{4 q}$
+
+$y_1=y_2=\omega_1 u_1+\omega_2 =\sqrt[3]{T}(\omega+\omega)=-\sqrt[3]{T}=\frac{\sqrt[3]{4 \alpha}}{2}$
+
+方程(2)有三个实根 , 其中至少有两个相等的实根 . 
+
+3) 若 $\Delta<0$, 即 $\mathrm{D}<0$ 时, 因为 $\left(\frac{p}{3}\right)^{3}=-\left(\frac{q}{2}\right)^{2}<0, p<0,\left(\frac{p}{3}\right)^{3}>0$,
+
+则 $u^{3}$ 、 $v^{3}$ 均为虚数 , 求出 $u^{3}$ 、 $v^{3}$, 并用三角式表示 , 就有 $u^{3}=T+i \sqrt{-D}, v^{3}=T-i \sqrt{-D} .$ 其中 $T,D$都是实数 , 
+\[
+\sqrt{T^{2}+(\sqrt{-D})^{2}}=\sqrt{\left(\frac{q}{2}\right)^{2}-D}=\sqrt{-\left(\frac{p}{3}\right)^{3}}
+\]
+
+$u^{3}=\sqrt{-\left(\frac{p}{3}\right)^{3}}\left(\frac{-\frac{q}{2}}{\sqrt{-\left(\frac{p}{3}\right)^{3}}}+\frac{\sqrt{-D}}{\sqrt{-\left(\frac{p}{3}\right)^{3}}} i\right)=-\frac{p \sqrt{-3 p}}{9}(\cos \alpha+i \sin \alpha)$
+
+
+
+同理$v^{3}-\frac{p \sqrt{-3 p}}{9}(\cos \alpha-i \sin \alpha)$
+
+其中 $\alpha=\arccos \left(\frac{-3 \sqrt{-3 p}}{2 q^{2}}\right)$, 且 $0<\alpha<\pi$
+
+取 $u_{1}=\frac{\sqrt{-3 p}}{3}\left(\cos \frac{\alpha}{3}+i \sin \frac{\alpha}{3}\right), \quad v_{1}=\frac{\sqrt{-3 p}}{3}\left(\cos \frac{\alpha}{3}-i \sin \frac{\alpha}{3}\right)$
+
+则 $u_{2}
+=w_{1} u_{1}
+=\frac{\sqrt{-3 p}}{3}\left(\cos \frac{2 \pi}{3}+i \sin \frac{2 \pi}{3}\right)\left(\cos \frac{\alpha}{3}+i \sin \frac{\alpha}{3}\right)$
+$=\frac{\sqrt{-3 p}}{3}\left(\cos \frac{2 \pi+\alpha}{3}+i \sin \frac{2 \pi+\alpha}{3}\right)$
+
+$v_{2}=w_{1} v_{1}=\frac{\sqrt{-3 p}}{3}\left(\cos \frac{4 \pi+\alpha}{3}-i \sin \frac{4 \pi+\alpha}{3}\right)$
+
+$u_{3}=w_{2} u_{1}=\frac{\sqrt{-3 p}}{3}\left(\cos \frac{4 \pi+\alpha}{3}+i \sin \frac{4 \pi+\alpha}{3}\right)$
+
+$v_{3}=w_{2} v_{1}=\frac{\sqrt{-3 p}}{3}\left(\cos \frac{2 \pi+\alpha}{3}-i \sin \frac{2 \pi+\alpha}{3}\right)$
+
+显然 , 当且仅当【】取 ,  ,  ,  ,  这三组时才满足 $uv=-\frac{p}{3}$,
+
+于是方程（2）得三个实根为 $y_{1}=u_{1}+v_{1}, \quad y_{2}=u_{2}+v_{2}, \quad y_{3}=u_{3}+v_{3}$,
+
+具体表示出来就为:
+
+$y_{1}=\frac{2 \sqrt{-3 p}}{3} \cos \frac{\alpha}{3}$
+
+$y_{2}=-\frac{\sqrt{-3 p}}{3}\left(\cos \frac{\alpha}{3}+\sqrt{3} \sin \frac{\alpha}{3}\right)$
+
+$y_{3}=-\frac{\sqrt{-3 p}}{3}\left(\cos \frac{\alpha}{3}-\sqrt{3} \sin \frac{\alpha}{3}\right)$
+
+$\alpha=\arccos \frac{-3 q \sqrt{-3 p}}{2 p^{2}}$
+
+当【】时 , 方程（2）有三个实根 .  
+
+综上所述 , 实系数一元三次方程 $y^{3}+p y+q=0$ 的求根公式如下:
+
+$D=\left(\frac{q}{2}\right)^{2}+\left(\frac{p}{3}\right)^{3}, \quad T=-\frac{q}{2}, \quad \alpha=\arccos \frac{-3 q \sqrt{-3 p}}{2 p^{2}}$
+
+$\omega_{1}=\frac{-1+\sqrt{3} i}{2}, \omega_{2}=\frac{-1-\sqrt{3} i}{2}$
+
+1）当$\Delta<0$时 , 方程有一个实根和两个共轨虚根 ,  
+
+$y_{1}=\sqrt[3]{T+\sqrt{D}}+\sqrt[3]{T-\sqrt{D}}$
+
+$y_{2}=\omega_1 \sqrt[3]{T+\sqrt{D}}+\omega_2 \sqrt[3]{T-\sqrt{D}}$
+
+$y_{3}=\omega_2 \sqrt[3]{T+\sqrt{D}}+\omega_1 \sqrt[3]{T-\sqrt{D}}$
+
+2) 当$\Delta=0$时 , 方程有三个实根 , 其中至少有两个相等的实根 , 
+
+$y_1=-\sqrt[3]{4 q}, \quad y_2=y_3=\frac{\sqrt[3]{4 q}}{2}$
+
+3）当$\Delta>0$时 , 方程有三个实根 , 
+
+$y_{1}=\frac{2 \sqrt{-3 p}}{3} \cos \frac{\alpha}{3}$
+
+$y_{2}=-\frac{\sqrt{-3 p}}{3}\left(\cos \frac{\alpha}{3}+\sqrt{3} \sin \frac{\alpha}{3}\right)$
+
+$y_{3}=-\frac{\sqrt{-3 p}}{3}\left(\cos \frac{\alpha}{3}-\sqrt{3} \sin \frac{\alpha}{3}\right)$
+
+
+
+
+\subsection{卡尔丹诺公式推导方法二}
+先把方程 $a x^{3}+b x^{2}+c x+d=0 \quad (1)$ 
+化为 $x^{3}+p x+q=0 \quad (2)$ 的形式:
+
+令 $x=y-\frac{b}{3 a}$, 则原式变成
+
+$a\left(y-\frac{b}{3 a}\right)^{3}+b\left(y-\frac{b}{3 a}\right)^{2}+c\left(y-\frac{b}{3 a}\right)+d=0$
+
+$a\left(y^{3}-\frac{b y^{2}}{a}+\frac{b^{2} y}{3 a^{2}}-\frac{b^{3}}{27 a^{3}}\right)+b\left(y^{2}-\frac{2 b y}{3 a}+\frac{b^{2}}{9 a^{2}}\right)+c\left(y-\frac{b}{3 a}\right)+d=0$
+
+$a y^{3}-b y^{2}+\frac{b^{2}}{3 a} y-\frac{b^{3}}{27 a^{2}}+b y^{2}-\frac{2 b^{2}}{3 a} y+\frac{b^{3}}{9 a^{2}}+c y-\frac{b c}{3 a}+d=0$
+
+$a y^{3}+\left(c-\frac{b^{2}}{3 a}\right) y+\left(d+\frac{2 b^{3}}{27 a^{2}}-\frac{b c}{3 a}\right)=0$
+
+$y^{3}+\left(\frac{c}{a}-\frac{b^{2}}{3 a^{2}}\right) y+\left(\frac{d}{a}+\frac{2 b^{3}}{27 a^{3}}-\frac{b c}{3 a^{2}}\right)=0$
+
+如此一来消去了二次项 , 化成 $y^{3}+p y+q=0$  , 其中
+$p=\frac{c}{a}-\frac{b^{2}}{3 a^{2}}, \quad q=\frac{d}{a}+\frac{2 b^{3}}{27 a^{3}}-\frac{b c}{3 a^{2}}$  . 
+
+对方程 $y^{3}+p y+q=0$ 直接利用卡尔丹诺公式:
+
+$y_{1}=\sqrt[3]{-\frac{q}{2}+\sqrt{\left(\frac{q}{2}\right)^{2}+\left(\frac{p}{3}\right)^{3}}}+\sqrt[3]{-\frac{q}{2}-\sqrt{\left(\frac{q}{2}\right)^{2}+\left(\frac{p}{3}\right)^{3}}}$
+
+$y_{2}=\omega \cdot \sqrt[3]{-\frac{q}{2}+\sqrt{\left(\frac{q}{2}\right)^{2}+\left(\frac{p}{3}\right)^{3}}}+\omega^{2} \cdot \sqrt[3]{-\frac{q}{2}-\sqrt{\left(\frac{q}{2}\right)^{2}+\left(\frac{p}{3}\right)^{3}}}$
+
+$y_{3}=\omega^{2} \cdot \sqrt[3]{-\frac{q}{2}+\sqrt{\left(\frac{q}{2}\right)^{2}+\left(\frac{p}{3}\right)^{3}}}+\omega \cdot \sqrt[3]{-\frac{q}{2}-\sqrt{\left(\frac{q}{2}\right)^{2}+\left(\frac{p}{3}\right)^{3}}}$
+
+其中 $\omega=-1+\sqrt{3} i$.
+
+$\Delta=\left(\frac{q}{2}\right)^{2}+\left(\frac{p}{3}\right)^{3}$ 是根的判别式: 
+
+$\Delta>0$ 时 , 有一个实根两个虚根; 
+
+$\Delta=0$ 时 , 有三个实根 , 且其 中至少有两个根相等; 
+
+$\Delta<0$ 时 , 有三不等实根 . 
+
+\subsection{卡尔丹诺公式推导方法三}
+
+
+
+
+
+
+
+
+
+\section{四次方程解法}
+
+
+
+\subsection{Vieta的解法}
+引自：古今数学思想 , 克莱因 , 第一册 . 
+
+为解一般四次方程
+\[
+x^{4}+b x^{3}+c x^{2}+d x+e=0
+\]
+Vieta 设 $x=y-b / 4$ 于是把方程化为
+\[
+x^{4}+p x^{2}+q x+r=0
+\]
+然后他把末尾三项移到右进并在两边加上 $2 x^{2} y^{2}+y^{4} .$ 这就使左边配成完全平方,然后也象 Ferrari 的方法那样, 适当选取$y,$ 使右边成为形如 $(A x+B)^{2}$ 的完全平方. 为选取合适的 $y$,他利用二次方程的判别式条件, 得出 $y$ 的一个六次方程而且凑巧还是 $y^{2}$ 的三次方程 . 这一步以及其余各步就完全和 Ferrari 的方法一样了.
+
+
+
+
