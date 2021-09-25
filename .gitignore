@@ -208,6 +208,7 @@ pythontex-files-*/
 *.dpth
 *.md5
 *.auxlock
+*.aux
 
 # todonotes
 *.tdo
@@ -274,3 +275,5 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+*.log
+*.gz
